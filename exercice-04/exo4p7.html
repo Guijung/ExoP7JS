@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 2</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <img src="assets/img/la-nuit-etoilee.jpg" alt="La nuit étoilée - V. VAN GOGH" />
+  <script>
+   const increaseSize = () => {
+   console.log('click')
+   //définit la tag image comme variable - [0] = index0 , l'image se trouve à l'index 0 du tableau
+   let myPict = document.getElementsByTagName("img")[0];
+   //clientWidth = largeur css + espaces intérieurs - largeur de la barre de défilement vertical.
+   let width = myPict.clientWidth;
+   //instruction rajoute 20% à la taille intitial : style(css) + variable width et on précise l'unité d'agrandissement (+%)   
+  myPict.style.width = (width + 20) + '%'; 
+}
+
+ //En cliquant sur l'image on appelle la fonction qui s'éxecute en ajoutant un evenement      
+document.getElementsByTagName("img")[0].addEventListener("click", increaseSize);
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<script>
+                var firstNumber = 10;
+                var secondNumber = 2;
+                // for(var i = firstNumber; i > 1; i = firstNumber / secondNumber) {
+                //         firstNumber = firstNumber / secondNumber;
+                //         console.log(firstNumber);
+                //     }
+                while (firstNumber / secondNumber > 1){
+                    firstNumber = firstNumber / secondNumber;
+                    console.log(firstNumber);
+                }
+            </script>

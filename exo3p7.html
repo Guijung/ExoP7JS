@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>exo3p7</title>
+  </head>
+  <body>
+    <p>
+      Une expression fléchée est une expression simplifiée qui doit son nom au
+      symbole => qui retourne la fonction sans avoir à utiliser "return".
+    </p>
+    <p>
+      Écrire une fonction qui prend 2 nombres en paramètres et qui retourne le
+      résultat de leur multiplication. Créer un formulaire permettant d'entrer
+      deux nombres. Au clic sur un bouton, lancer votre fonction.
+    </p>
+    <p>Refaire le premier exercice en utilisant une fonction fléchée.</p>
+    <input type="text" id="n1" />
+    <input type="text" id="n2" />
+    <select id="operators">
+      <option value="*">x</option>
+    </select>
+    <input type="text" id="result" />
+    <button onclick="calculate();">=</button>
+    <script>
+      const multiply = (n1, n2) => n1 * n2;
+
+      const calculate = () => {
+        const n1 = parseInt(document.getElementById("n1").value);
+        const n2 = parseInt(document.getElementById("n2").value);
+
+        document.getElementById("result").value = multiply(n1, n2);
+      };
+
+      document.addEventListener("click", calculate);
+    </script>
+  </body>
+</html>
